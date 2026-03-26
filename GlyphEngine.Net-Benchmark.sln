@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlyphEngine.Net-Benchmark", "GlyphEngine.Net-Benchmark\GlyphEngine.Net-Benchmark.csproj", "{964D00EF-AF09-41E7-A94D-7AB21851BF56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlyphEngine.Net", "..\GlyphEngine.Net\GlyphEngine.Net\GlyphEngine.Net.csproj", "{192B8672-F78E-8ACD-9868-D2E5C6352D4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{964D00EF-AF09-41E7-A94D-7AB21851BF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{964D00EF-AF09-41E7-A94D-7AB21851BF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{964D00EF-AF09-41E7-A94D-7AB21851BF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{964D00EF-AF09-41E7-A94D-7AB21851BF56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192B8672-F78E-8ACD-9868-D2E5C6352D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192B8672-F78E-8ACD-9868-D2E5C6352D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192B8672-F78E-8ACD-9868-D2E5C6352D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192B8672-F78E-8ACD-9868-D2E5C6352D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9FBAFD9-86E6-479E-AEF6-80D95A2D6F93}
+	EndGlobalSection
+EndGlobal
