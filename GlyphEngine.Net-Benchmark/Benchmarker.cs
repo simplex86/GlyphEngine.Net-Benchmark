@@ -23,18 +23,19 @@ namespace GlyphEngine.Benchmark
         {
             random = new Random(20260317);
 
-            var ntype = typeof(IRenderer).Assembly.GetType("GlyphEngine.NRenderer");
-            nRenderer = Activator.CreateInstance(ntype) as IRenderer;
+            nRenderer = InstantiateRenderer("GlyphEngine.NRenderer");
+            wRenderer = InstantiateRenderer("GlyphEngine.WRenderer");
+        }
 
-            var wtype = typeof(IRenderer).Assembly.GetType("GlyphEngine.WRenderer");
-            wRenderer = Activator.CreateInstance(wtype) as IRenderer;
+        private IRenderer InstantiateRenderer(string name)
+        {
+            var type = typeof(IRenderer).Assembly.GetType(name);
+            var renderer = Activator.CreateInstance(type) as IRenderer;
 
-            (nRenderer as IFakable).Fake(true);
-            (wRenderer as IFakable).Fake(true);
+            var faker = renderer as IFakable;
+            faker?.Fake(true);
 
-            var w = Console.WindowWidth;
-            var h = Console.WindowHeight;
-            var n = w * h;
+            return renderer;
         }
 
         [IterationSetup]
@@ -56,7 +57,7 @@ namespace GlyphEngine.Benchmark
             }
         }
 
-        [Benchmark(OperationsPerInvoke = 1)]
+        [Benchmark]
         public void TestN()
         {
             foreach (var p in pixels)
@@ -66,7 +67,7 @@ namespace GlyphEngine.Benchmark
             nRenderer?.Render();
         }
 
-        [Benchmark(OperationsPerInvoke = 1)]
+        [Benchmark]
         public void TestW()
         {
             foreach (var p in pixels)
